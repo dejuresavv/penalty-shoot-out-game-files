@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrossTheGoalLine : MonoBehaviour
 {
-    Vector3 ResetVector;
+    Vector3 ResetVector; //δεν χρησιμοποιηθηκε σε αυτο το σκριπτ
     Rigidbody BallSpeed;
     float Ball_speed = 0.0f;
     AudioSource goal;
