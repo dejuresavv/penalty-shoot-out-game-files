@@ -17,12 +17,12 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void IncrementScore()
+    public void IncrementScore() //καλειται απο το script CrossTheGoalLine.cs καθε φορα που γινεται συγκρουση μεταξυ της μπαλας και του αορατου τοιχου πισω απο το τερμα
     {
-        Score++;
-        Debug.Log("goal");
-        Debug.Log("Score is: " + Score);
-        ScoreText.text = "GOALS       " + Score.ToString();
+        Score++; //αυξηση της int score κατα 1
+        Debug.Log("goal");//ενα απλο debug μηνυμα
+        Debug.Log("Score is: " + Score); //για επιβεβαιωση λειτουργιας
+        ScoreText.text = "GOALS       " + Score.ToString();//ετσι εμφανιζεται στο scoreboard του γηπεδου
     }
 
     // Update is called once per frame
