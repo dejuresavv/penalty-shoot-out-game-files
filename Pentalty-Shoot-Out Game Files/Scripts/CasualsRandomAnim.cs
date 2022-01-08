@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CasualsRandomAnim : MonoBehaviour
 {
-    private Animator anim;
+    private Animator anim; //Δημιουργια μεταβλητης τυπου Animator της Unity
 
     IEnumerator Start()
     {
@@ -12,10 +12,11 @@ public class CasualsRandomAnim : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(3); //Σταματει το σκριπτ για 3 δευτερολεπτα μεχρι να παιξει το επομενο Animation
+                                                
 
-            anim.SetInteger("MoveIndex", Random.Range(0, 2));
-            anim.SetTrigger("Move");
+            anim.SetInteger("MoveIndex", Random.Range(0, 2)); // εχουν οριστει 3 animations με εναν δεικτη η καθεμια. Η συγκεκριμενη εντολη επιλεγει τυχαια εναν δεικτη
+            anim.SetTrigger("Move"); // ενεργοποιει το animation με ονομα Move
         }
     }
 }
