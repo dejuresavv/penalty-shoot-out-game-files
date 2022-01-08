@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FansRandomAnims : MonoBehaviour
 {
+
+    // Ομοια λογικη με το Script CasualsRandomAnim.cs, αλλα το τρεχον script τρεχει για τους οπαδους πισω απο το τερμα
     private Animator anim;
 
     IEnumerator Start()
