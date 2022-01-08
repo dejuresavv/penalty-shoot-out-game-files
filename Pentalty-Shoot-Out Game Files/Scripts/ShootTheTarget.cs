@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShootTheTarget : MonoBehaviour
 {
     public Camera camera;
-    public float forceSize;
+    public float forceSize; // εγινε public για να μπορει να οριζεται η τιμη μεσα απο το Unity χωρις να χρειαζεται να ανατρεχω στον κωδικα κατα τη διαρκεια της κατασκευης
     private Rigidbody rigidbody;
     void Start()
     {
