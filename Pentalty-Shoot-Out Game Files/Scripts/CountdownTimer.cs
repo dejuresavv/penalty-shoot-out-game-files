@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 90f;
-    [SerializeField] Text CountdownText;
+    float currentTime = 0f; // ορισμος μιας float για την τρεχουσα ωρα παιχνιδιου
+    float startingTime = 90f; //ορισμος μιας float για την εναρκτηρια ωρα παιχνιδιου
+    [SerializeField] Text CountdownText; //Κειμενο που εμφανιζεται στο scoreboard του γηπεδου
     
 
     private void Start()
@@ -18,15 +18,15 @@ public class CountdownTimer : MonoBehaviour
 
     private void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        CountdownText.text ="Time Left   " + currentTime.ToString("0.0");
+        currentTime -= 1 * Time.deltaTime; //μειωση του τρεχοντος χρονου κατα ενα πραγματικο δευτερολεπτο
+        CountdownText.text ="Time Left   " + currentTime.ToString("0.0"); //μεταβολη της μεταβλητης τυπου float currentTime σε string για να εμφανιστει στο scoreboard
 
 
       
         if(currentTime <=0)
         {
-            SceneManager.LoadScene("EndGame");
-            currentTime = 0;
+            SceneManager.LoadScene("EndGame"); //με το που γινει το currentTime 0, ληγει το παιχνιδι και μεταφερεται η σκηνη στο τελικο μενου
+            currentTime = 0;// τυπικα οριζεται σε 0 για να μην συνεχισει να μετραει αντιστροφα
         }
     }
 }
