@@ -10,13 +10,15 @@ public class ResetTheBall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Goal" || other.gameObject.tag == "Out")
+        if (other.gameObject.tag == "Goal" || other.gameObject.tag == "Out") // αν η μπαλα ερθει σε συγκρουση με το αορατο αντικειμενο πισω σπο το τερμα που μετραει \
+                                                                             // γκολ ή με τα αορατα αντικειμενα γυρω απο το γηπεδο.
         {
-            ResetPosition = new Vector3(0.555f, 1.624f, 10.923f);
-            transform.position = ResetPosition;
+            ResetPosition = new Vector3(0.555f, 1.624f, 10.923f); //αναθεση στην μεταβλητη ResetPosition τυπου Vector3, τις συντεταγμενες της αρχικης θεσης της μπαλας
+            transform.position = ResetPosition; //μεταφορα της μπαλας στις αρχικες συντεταγμενες (καθως εχει μετακινηθει)
             BallSpeed = GetComponent<Rigidbody>();
-            BallSpeed.velocity = Vector3.zero;
-            BallSpeed.angularVelocity = Vector3.zero;//ResetVector * Ball_speed;
+            BallSpeed.velocity = Vector3.zero; //μηδενισμος της ταχητυτας κινησης μεταφορας
+            BallSpeed.angularVelocity = Vector3.zero; // μηδενισμος της ταχυτητας περιστροφης (ειναι αναγκαια καθως χωρις αυτη οταν επαναφερεται η μπαλα, συγκρατει ταχυτητα περιστροφης
+                                                      // και μετακινειται
            
         }
     }
